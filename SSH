@@ -1,0 +1,12 @@
+Open SSH for Powershell
+If chocolatey is not yet installed, you must at first install it. Run the Powershell as administrator and execute:
+
+Set-ExecutionPolicy Unrestricted
+iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
+
+If chocolatey is already installed, run the Powershell as administrator and execute the following command to install OpenSSH, to reload the environment variables and to connect to a client:
+
+
+choco install openssh                # installs open ssh
+refreshenv                           # reloads the environment variables
+ssh remoteClient -i "MyKeyPair.pem"  # connects to remoteClient via ssh
